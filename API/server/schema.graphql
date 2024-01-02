@@ -1,0 +1,43 @@
+scalar GraphQLDate
+
+type Employee {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  age: Int
+  dateOfJoining: GraphQLDate!
+  title: String!
+  department: String!
+  employeeType: String!
+  currentStatus: String!
+}
+
+input EmployeeInputs {
+  firstName: String!
+  lastName: String!
+  age: Int
+  dateOfJoining: GraphQLDate!
+  title: String!
+  department: String!
+  employeeType: String!
+  currentStatus: String
+}
+
+input EmployeeFilterInput {
+  employeeType: String
+}
+
+type Query {
+  about: String!
+  employeesList: [Employee!]!
+  employeesListFilter(filter: EmployeeFilterInput): [Employee!]!
+  employee(id: ID!): Employee!
+  employeeById(id: ID!): Employee!
+}
+
+type Mutation {
+  setAboutMessage(message: String!): String
+  addEmployee(employee: EmployeeInputs!): Employee!
+  deleteEmployee(id: ID!): Boolean
+  updateEmployee(id: ID!, input: EmployeeInputs!): Employee
+}

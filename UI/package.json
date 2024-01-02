@@ -1,0 +1,47 @@
+{
+  "name": "zaid_alam_assignment1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "nodemon node.js",
+    "#compile": "babel JSX --presets @babel/react --out-dir public",
+    "compile": "webpack --mode development",
+    "#watch": "babel JSX --presets @babel/react --out-dir public --watch --verbose",
+    "watch": "webpack -w --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^3.12.1",
+    "babel-polyfill": "^6.26.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^0.21.0",
+    "install": "^0.13.0",
+    "mongoose": "^8.0.0",
+    "nodemon": "^3.0.1",
+    "prop-types": "^15.8.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^6.19.0",
+    "whatwg-fetch": "^3.6.19"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.22.15",
+    "babel-loader": "^9.1.3",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^6.1.1",
+    "webpack-hot-middleware": "^2.25.4",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
